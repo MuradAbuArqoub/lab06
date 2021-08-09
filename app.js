@@ -15,6 +15,7 @@ function city(name, min, max, avg) {
       this.cookiesPerHour.push(cookiesSoldThisHour);
     }
   };
+this.calculateCookiesPerHour();
 
   this.time = function () {
     let msg = '';
@@ -48,22 +49,22 @@ let city1 = new city('Seattle', 23, 65, 6.3);
 // city1.time();
 // city1.render();
 
-// let city2 = new city('Tokyo', 3, 24, 1.2);
+let city2 = new city('Tokyo', 3, 24, 1.2);
 // city2.calculateCookiesPerHour();
 // city2.time();
 // city2.render();
 
-// let city3 = new city('Dubai', 11, 38, 3.7);
+let city3 = new city('Dubai', 11, 38, 3.7);
 // city3.calculateCookiesPerHour();
 // city3.time();
 // city3.render();
 
-// let city4 = new city('Paris', 20, 38, 2.3);
+let city4 = new city('Paris', 20, 38, 2.3);
 // city4.calculateCookiesPerHour();
 // city4.time();
 // city4.render();
 
-// let city5 = new city('Liam', 2, 16, 4.6);
+let city5 = new city('Liam', 2, 16, 4.6);
 // city5.calculateCookiesPerHour();
 // city5.time();
 // city5.render();
@@ -329,7 +330,7 @@ let city1 = new city('Seattle', 23, 65, 6.3);
 function addTable() {
   let hours2 = [' ','6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm'];
   var myTableDiv = document.getElementById("myDynamicTable");
-  let branches = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
+  let branches = [city1, city2, city3, city4, city5];
   var table = document.createElement('TABLE');
   table.border = '1';
 
@@ -356,12 +357,19 @@ for (var i = 0; i < branches.length; i++) {
 for (var j = 0; j < hours2.length; j++) {
   var td = document.createElement('TD');
   td.width = '75';
-  td.appendChild(document.createTextNode(city1.calculateCookiesPerHour()));
-  tr.appendChild(td);
+  if(j == 0 ){
+    td.textContent = branches[i].name;
+    tr.appendChild(td);
+  }
+  else{
+    td.textContent = branches[i].cookiesPerHour[j-1];
+    tr.appendChild(td);
+  }
 }
 }
 
-
+// td.appendChild(document.createTextNode(branches[i].cookiesPerHour[j]));
+//   tr.appendChild(td);
 
 myTableDiv.appendChild(table);
 }
