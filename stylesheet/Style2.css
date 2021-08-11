@@ -1,7 +1,9 @@
+*{
+    box-sizing: border-box; 
+}
 body{
-    text-align: center;
     background-color: #D6DBDF;
-    table-layout: auto;
+    
 }
 
 a{
@@ -14,4 +16,31 @@ a{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    
+}
+
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+
+}
+form{
+    display: inline-block;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+header{
+    background-color: cadetblue;
+    padding: 30px 30px;
+    text-align: center;
+    font-size: 30px;
 }
