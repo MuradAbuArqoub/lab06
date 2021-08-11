@@ -9,13 +9,51 @@
 
 </head>
 <body>  
-        <div id="myDynamicTable"> </div>
+    <header>
+            <h3>Salamon Cookies</h3>
+    </header>
 
-        <div id = "container"></div>
+    <main>
+        <div id="button"></div>
+        <div id="myDynamicTable"></div>
+
+        <section id="infoBox">
+            
+        <div id="box"></div>
+
+        </section>
+
+        <form action="" id="myForm">
+            <fieldset>
+                <legend> Salamon Cookies <!--legend: tittle --> </legend>
+                    
+                    
+                    <label for="Storename">Store Name</label>
+                    <input type="text" name="Storename" id="Storename">
+                    <br></br>
+    
+                    <label for="MinimumOrder">Minimum Order</label>
+                    <input type="number" name="MinimumOrder" id="MinimumOrder">
+                    <br></br>
+    
+                    <label for="MaxmumOrder">Maxmum Order</label>
+                    <input type="number" name="MaxmumOrder" id="MaxmumOrder">
+                    <br></br>
+    
+                    <label for="AvarageSales">Avarage Sales</label>
+                    <input type="number" name="AvarageSales" id="AvarageSales">
+                    <br></br>
+                    
+                    <input type="submit" value="submit" /> 
+               
+            </fieldset>
+        </form>
+    </main>
 
     <footer>
+        <button id="btn1">Generate</button>
         <div id="listCookies"></div>
-        <a href="index.html" target="_blank">This is a link</a>
+        <a href="index.html" target="_blank">Back to website</a>
     </footer>
     
         <script src="app.js"></script>
