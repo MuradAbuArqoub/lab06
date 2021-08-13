@@ -25,6 +25,11 @@ section:nth-child(3){
 section:nth-child(4){
     margin-top: 20px;
     margin-left: 330px;
+    margin-left: 550px;
+}
+section:nth-child(4){
+    margin-top: 20px;
+    margin-left: 150px;
     display: flex;
     padding-bottom: 20px;
 }
@@ -49,6 +54,7 @@ div:nth-of-type(5){
 body{
     background-color: #D6DBDF;
     text-align: center;
+    
 }
 
 footer{
